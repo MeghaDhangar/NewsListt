@@ -8,7 +8,6 @@
 //   const [currentPage, setCurrentPage] = useState(1);
 //   const [searchdata, setSearchData] = useState('');
 //   const itemsPerPage = 10;
-
 //   useEffect(() => {
 //   const fetchData = async () => {
 //     try {
@@ -32,11 +31,9 @@
 //   );
 //   const currentNewsData = filteredNewsData.slice(startIndex, endIndex);
 //   const totalPages = Math.ceil(filteredNewsData.length / itemsPerPage);
-
 //   const handlePageChange = (page) => {
 //     setCurrentPage(page);
 //   };
-
 //   const searchNews = async () => {
 //     try {
 //       const response = await axios.get(
