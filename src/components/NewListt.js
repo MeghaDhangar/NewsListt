@@ -14,7 +14,7 @@ function NewsList() {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
-                    `https://newsapi.org/v2/everything?q=apple&from=2023-10-06&to=2023-10-06&sortBy=popularity&apiKey=dc47ddd5818f498d9a685c776e29b47a`
+                    `https://newsapi.org/v2/everything?q=apple&from=2024-02-22&to=2024-02-22&sortBy=popularity&apiKey=6c486bd2db674fabbad5e4a38b8b1ff5`
                 );
                 const data = response.data.articles;
                 setNewsData(data);
@@ -41,7 +41,8 @@ function NewsList() {
     const searchNews = async () => {
         try {
             const response = await axios.get(
-                `https://newsapi.org/v2/everything?q=${searchdata}&from=2023-10-06&to=2023-10-06&sortBy=popularity&apiKey=dc47ddd5818f498d9a685c776e29b47a`
+            
+                `https://newsapi.org/v2/everything?q=${searchdata}&from=2024-02-22&to=2024-02-22&sortBy=popularity&apiKey=6c486bd2db674fabbad5e4a38b8b1ff5`
             );
             const data = response.data.articles;
             setNewsData(data);
@@ -54,7 +55,7 @@ function NewsList() {
 
     return (
         <div className="container">
-              <h1 className="mb-4"> Show News List</h1>
+            <h1 className="mb-4"> Show News List</h1>
             <SearchBar searchdata={searchdata} setSearchData={setSearchData} searchNews={searchNews} />
             <Pagination totalPages={totalPages} currentPage={currentPage} handlePageChange={handlePageChange} />
             <div className="news-cards">
